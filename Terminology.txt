@@ -1,0 +1,66 @@
+Hey Cloud Gurus in this
+lesson we're going to talk about
+the terminology we need to know before using IDS.
+So the first one is going to be database instance,
+this is the basic building block of Amazon RDS
+a database instance is an isolated
+database environment in the cloud.
+A database instance can contain multiple
+user-created databases that you can access
+by using the same tools and applications
+that you use the stand alone database.
+You can create modify a database instance
+by using AWS CLI the AWS RDS API
+or management console.
+The database engine type.
+The database engine type is the type
+of database you would like to run.
+The options available are MySQL, MariaDB,
+PostgreSQL, Oracle, SQL server,
+and Aurora database engines.
+The database instance class.
+The database instance class is similar
+to the EC2 instance type and it determines
+the CPU and Memory capacity of your database.
+For example this one would be db.m4.large
+which is essentially running your database
+on an m4 large.
+Multi AZ also known as high availability.
+Within a region you can have
+multiple availability zones.
+An availability zone is a physically isolated
+distinct independent infrastructure.
+When a database says multi AZ it means the database
+will be hosted in two availability zones
+to provide a high availability
+a primary note will be in one AZ
+and the secondary will be in another AZ.
+In the case of one availability failing
+over you can rely on the second one
+to be there to handle your traffic.
+Read replicas
+A read replica is a node which is part of a
+database instance which handles only read queries.
+The idea here is that the operation is sent
+to a database of mostly queries and hence
+a read replica can offload a significant
+amount of traffic from your primary host.
+Primary host.
+The primary host is the node within
+the database instance which handles
+all the read and write traffic.
+When you have read replicas,
+some of the read traffic can be offloaded.
+Secondary host or a StandBy host.
+The secondary host is the node within
+the database that is synchronously updated,
+but is not actively handling write traffic
+directly from your application.
+It serves as a redundancy layer in case of failover.
+Aurora
+Amazon Aurora is a MySQL and PostgreSQL
+compatible relational database built for the Cloud.
+Amazon has simply taken the open source databases
+and swapped out the lowest storage and logging layers
+to adapt them to be more cloud native.
+We'll take a deeper look into Aurora later in this course.
